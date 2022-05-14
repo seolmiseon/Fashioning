@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous">
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+
+  <link rel="stylesheet" href="boot.css">
+  <title>HELLO !</title>
+</head>
+
+<body>
+
+
+
+
+
+  <div class="black-background">
+    <div class="white-background">
+      <p>로그인하세요</p>
+      <button class="btn btn-danger" id="close"> X </button>
+
+      <form action="login.php">
+        <div class="form-group">
+          <input type="email" class="form-control" placeholder="Email" id="email">
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" placeholder="Password" id="pass">
+        </div>
+        <button type="submit" class="btn btn-primary">전송</button>
+      </form>
+
+    </div>
+  </div>
+
+  <div class="nav-menu nav-black">
+    <h4 style="margin:0" class="large-logo small-logo">SEOL Studio</h4>
+    <a id="nav-sub-button">PRODUCTS</a>
+  </div>
+
+  <ul class="list-group nav-sub">
+    <li class="list-group-item">T-SHIRT</li>
+    <li class="list-group-item">PANTS</li>
+    <li class="list-group-item">OUTER</li>
+    <li class="list-group-item">SHOES</li>
+
+  </ul>
+
+
+  <div class="jumbotron boot-background">
+    <h1 class="display-4">Hello, world!</h1>
+    <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to
+      featured content or information.</p>
+    <hr class="my-4">
+    <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+    <a id="login" class="btn btn-primary btn-lg" role="button">Log In</a>
+    <a id="show-menu" class="btn btn-danger btn-lg" role="button">Show Menu</a>
+  </div>
+
+
+
+  <h5 class="my-4 text-center">SHOW</h5>
+
+  <script>
+    var h5태그 = document.querySelector('h5');
+    //var 글씨 = document.querySelector('h5').innerHTML;
+
+    $('.btn-danger').click(function () {
+      h5태그.innerHTML = 'SHOW';
+      setTimeout(function () {
+        h5태그.innerHTML = h5태그.innerHTML + 'C'
+      }, 500);
+      setTimeout(function () {
+        h5태그.innerHTML = h5태그.innerHTML + 'A'
+      }, 500);
+      setTimeout(function () {
+        h5태그.innerHTML = h5태그.innerHTML + 'S'
+      }, 500);
+      setTimeout(function () {
+        h5태그.innerHTML = h5태그.innerHTML + 'E'
+      }, 500);
+
+    });
+  </script>
+
+  <div style="overflow:hidden; position:relative">
+    <button class="prev">PREV</button>
+    <div class="slide-container">
+      <div class="slide-box">
+        <img src="../image/style-1.jpg">
+      </div>
+      <div class="slide-box">
+        <img src="../image/style-3.jpg">
+      </div>
+
+      <div class="slide-box">
+        <img src="../image/style-4.jpg">
+      </div>
+    </div>
+    <button class="next">NEXT</button>
+  </div>
+
+
+  <button class="slide-1">1</button>
+  <button class="slide-2">2</button>
+  <button class="slide-3">3</button>
+
+  <div class="my-5"></div>
+
+
+  <style>
+
+  </style>
+
+
+  <div class="container mt-5">
+
+    <ul class="list">
+      <li class="tab-button">Products</li>
+      <li class="tab-button active">Information</li>
+      <li class="tab-button">Shipping</li>
+      <li class="tab-button">Q & A</li>
+      <li class="tab-button"> PAY </li>
+    </ul>
+
+    <div class="tab-content">
+      <p>상품설명입니다. Product</p>
+    </div>
+    <div class="tab-content show">
+      <p>상품정보입니다. Info</p>
+    </div>
+    <div class="tab-content">
+      <p>배송정보입니다. Shipping</p>
+    </div>
+    <div class="tab-content">
+      <p>빠른답변으로 ....</p>
+    </div>
+    <div class="tab-content">
+      <p>신중하게 </p>
+    </div>
+  </div>
+
+  <script src="tab.js"></script>
+
+
+  <script>
+    $(window).on('scroll', function () {
+
+      if ($(window).scrollTop() > 100) {
+        $('.nav-menu').addClass('nav-black');
+        $('.nav-menu h4').addClass('small-logo');
+      } else
+
+        ($(window).scrollTop() <= 100)
+      $('.nav-menu').removeClass('nav-black');
+      $('.nav-menu h4').removeClass('small-logo');
+
+    });
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"
+    integrity="sha256-eVNjHw5UeU0jUqPPpZHAkU1z4U+QFBBY488WvueTm88=" crossorigin="anonymous"></script>
+  <script>
+    var 이미지1 = document.querySelectorAll('.slide-box img')[0];
+
+    var 매니저 = new Hammer.Manager(이미지1);
+    매니저.add(new Hammer.Pan({
+      thresold: 0
+    }));
+
+
+    매니저.on('pan', function (e) {
+      console.log(e.deltaX);
+      // 만약에 이사람이 왼쪽으로 그림을 슬라이드했을때 
+      if (e.deltaX < -1) {
+        $('.slide-container').css('transform', 'translateX(' + e.deltaX + 'px)');
+      }
+    })
+
+
+    var 지금보이는사진 = 1;
+
+    $('.prev').click(function () {
+      if (지금보이는사진 > 1) {
+        $('.slide-container').css('transform', 'translateX(-' + (지금보이는사진 - 1) + '00vw)');
+        지금보이는사진 = 지금보이는사진 - 1;
+      }
+
+    });
+    var 지금보이는사진 = 1;
+
+    $('.next').click(function () {
+      if (지금보이는사진 < 3) {
+        $('.slide-container').css('transform', 'translateX(-' + 지금보이는사진 + '00vw)');
+        지금보이는사진 = 지금보이는사진 + 1;
+      }
+
+    });
+    $('.slide-1').click(function () {
+      $('.slide-container').css('transform', 'translateX(0vw)');
+    });
+    $('.slide-2').click(function () {
+      $('.slide-container').css('transform', 'translateX(-100vw)');
+    });
+    $('.slide-3').click(function () {
+      $('.slide-container').css('transform', 'translateX(-200vw)');
+    });
+  </script>
+
+
+
+  <script>
+    $('#login').on('click', function () {
+
+      $('.black-background').css('transform', 'translateY(0px)');
+
+    });
+  </script>
+
+
+  <script>
+    var 이메일안내창 = $('#email-alert');
+
+    $('form').on('submit', function (e) {
+
+      // 만약에 지금 이메일 input에 입렵된값이 정규식과 비굘했을때 
+      // false 인경우 폼전송 마기, 안내창 띄우기 
+
+
+      var 입력한이메일 = $('#email').val();
+      if (
+        /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()\.,;\s@\"]+\.{0,1})+([^<>()\.,;:\s@\"]{2,}|[\d\.]+))$/
+
+        .test(입력한이메일) == false) {
+        e.preventDefault();
+        $('#email-alert').show();
+      } else if (입력한이메일 == ""); {
+        e.preventDefault();
+      }
+
+      var 입력한비밀번호 = $('#pass').val();
+
+      if (/^.*(?=^.{8,15}$)(?=.*\d)(?=.*[a-zA-Z])(?=.*[!@#$%^&+=]).*$/
+        .test(입력한비밀번호) == false) {
+        e.preventDefault();
+        $('#pass-alert').show();
+      }
+
+
+
+
+
+
+
+      // if($('#email').val() == ""){
+      //   e.preventDefault();
+      //   $('#email-alert').show();
+      // }
+      // if($('#pass').val() == ""){
+      //   e.preventDefault();
+      //   $('#pass-alert').show();
+      // }
+    });
+
+
+    // /\S/.test('abcdefghijk');
+    // /\S+@\S+\.\S+/.test('abddd@adaaa.com')
+
+
+
+
+
+
+    $('#login').on('click', function () {
+      // if ($('#test-in').val() =='안녕'){
+      $('.black-background').fadeIn();
+
+    });
+
+
+
+    $('#close').on('click', function () {
+      $('.black-background').fadeOut();
+    });
+
+    $('#nav-sub-button').click(function () {
+      $('.nav-sub').slideToggle();
+
+    });
+  </script>
+
+
+
+</body>
+
+</html>

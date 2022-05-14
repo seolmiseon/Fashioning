@@ -1,0 +1,164 @@
+.boot-background {
+    background-image: url(../image/portfolio-4.jpg);
+    background-size:cover;
+    color:purple;
+    border-radius:0px;
+
+}
+.black-background {
+    background: rgba(0,0,0,0.5);
+    position:fixed;
+    z-index:5;
+    width:100%;
+    height:100%;
+    display:block;
+    transition:all 1s;
+    transform: translateY(-1000px);
+
+
+}
+.white-background {
+    background:white; 
+    width:80%;
+    margin: 100px auto;
+    padding:20px;
+    border-radius: 10px;
+
+}
+.large-logo{
+    font-size:30px;
+    transition: all 0.5s;
+  
+
+}
+.small-logo{
+    font-size:15px;
+}
+.nav-menu {
+    display:flex;
+    justify-content:space-between;
+    padding:15px;
+    align-items: center;
+    position: fixed;
+    z-index: 5;
+    width:100%;
+    background:transparent;
+    color:white;
+    transition:all 0.5s;
+
+}
+.nav-black {
+    background:white;
+    color:black;
+}
+.nav-sub {
+    display:none;
+    align-items:right;
+
+}
+
+.slide-container{
+    width:300vw;
+    /* transition:transform 1s; */
+    
+   
+}
+.slide-box {
+    width:100vw;
+    float:left;
+
+}
+.slide-box img {
+    width:100%;
+}
+.next {
+ position:absolute;
+ background-color:transparent;
+ color:white;
+ top:45%;
+ right:0;
+ text-align: center;
+ border-radius: 50%;
+ padding:10px 20px;
+ font-size:20px;
+ cursor:pointer;
+}
+.prev {
+    position:absolute;
+    background-color:transparent;
+    color:darkcyan;
+    top:45%;
+    left:0;
+    text-align: center;
+    border-radius: 50%;
+    padding:10px 20px;
+    font-size:20px;
+    cursor:pointer;  
+}
+.prev {
+    left:10px;
+}
+.prev:hover {
+    transform:translateX(10px);
+}
+.next {
+    position:absolute;
+    background-color:transparent;
+    color:darkcyan;
+    top:45%;
+    right:0;
+    text-align: center;
+    border-radius: 50%;
+    padding:10px 20px;
+    font-size:20px;
+    cursor:pointer;  
+}
+.next {
+    right:10px;
+}
+.next:hover{
+    transform:translateX(10px);
+}
+
+
+ul.list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #ccc;
+    }
+    ul.list::after {
+    content: '';
+    display: block;
+    clear: both;
+    }
+    .tab-button {
+    display: block;
+    padding: 10px 20px 10px 20px;
+    float: left;
+    margin-right: -1px;
+    margin-bottom: -1px;
+    color: grey;
+    text-decoration: none;
+    cursor: pointer;
+    }
+    i{
+    color:grey;
+    width: 100%;
+    
+    }
+    .active {
+    border-top: 2px solid orange;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid white;
+    border-left: 1px solid #ccc;
+    color: black;
+    margin-top: -2px;
+    }
+    .tab-content {
+    display: none;
+    padding: 10px;
+    }
+    .show {
+    display: block;
+    }
